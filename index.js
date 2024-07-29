@@ -28,6 +28,27 @@ function displayMessage(messages, index) {
 	timer();
 }
 
+function save(filename, data) {
+    const blob = new Blob([data], {type: 'text/plain'});
+    if(window.navigator.msSaveOrOpenBlob) {
+        window.navigator.msSaveBlob(blob, filename);
+    }
+    else{
+        const elem = window.document.createElement('a');
+        elem.href = window.URL.createObjectURL(blob);
+        elem.download = filename;        
+        document.body.appendChild(elem);
+        elem.click();        
+        document.body.removeChild(elem);
+    }
+}
+
+function getTime() {
+	let now = new Date().toLocaleString("en-US", {timeZone: "America/New_York"}).split(', ');
+	let date = now[0].split('/').reverse().join('-')
+	return date + "@" + now[1].split(' ').join('');
+}
+
 window.addEventListener('DOMContentLoaded', (event) => {
     const input = document.getElementById("input");
 	var messages = [];
@@ -39,6 +60,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		  input.value = "";
 		}
 		if (event.key === "Shift" && input.value == "") {
+			save(getTime(), messages.join('\n'))
 			displayMessage([...messages], 0);
 			messages = [];
 		}
