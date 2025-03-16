@@ -1,0 +1,45 @@
+html {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	background: radial-gradient(#0d0d0d, #000000);
+}
+
+body {
+	height: 100%;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#input {
+	padding: auto;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-family: Times;
+	font-size: 100%;
+	background: none;
+	border: 0;
+    outline: 0;
+    color: white;
+    resize: none;
+}
+
+#return {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 15%;
+	padding-right: 15%;
+	text-decoration: none;
+	color: black;
+	font-family: Times;
+}
+
+#return:hover {
+	color: white;
+}
+

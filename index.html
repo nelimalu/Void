@@ -7,6 +7,23 @@
 		<script src="index.js"></script>
 	</head>
 	<body>
-		<input id="input"></input>
+		<h1>void app</h1>
+		<ul>
+			<li id="zen" onclick="gotozen()">go to zen</li>
+			<li>
+				<div>
+					<s>upload a file to replay:</s>
+					<input type="file"></input>
+				<div>
+			</li>
+		</ul>
+		<div>
+			playback char delay (ms):
+			<input id="char" type="number" value="50"/>
+		</div>
+		<div>
+			playback line delay (ms):
+			<input id="line" type="number" value="2000"/>
+		</div>
 	</body>
 </html>

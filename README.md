@@ -5,6 +5,6 @@ when you're done saying things, press shift (while the line is empty) to replay 
 
 ### todo
 - [x] change done key to F8
-- [ ] create homepage
+- [x] create homepage
 - [ ] create replay feature
-- [ ] settings to customize playback speed and newline pause
+- [x] settings to customize playback speed and newline pause
