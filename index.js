@@ -55,11 +55,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	
 	input.addEventListener("keydown", function(event) {
 		new Audio("assets/type1.wav").play();
+		console.log(event.key);
 		if (event.key === "Enter") {
 		  messages.push(input.value);
 		  input.value = "";
 		}
-		if (event.key === "Shift" && input.value == "") {
+		if (event.key === "F8" && input.value == "") {
 			save(getTime(), messages.join('\n'))
 			displayMessage([...messages], 0);
 			messages = [];
